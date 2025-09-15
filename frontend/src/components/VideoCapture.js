@@ -4,7 +4,7 @@ import { FaceDetection } from '../services/detection';
 import { startSession, endSession, logEvent } from '../services/api';
 import io from 'socket.io-client';
 
-const socket = io(process.env.REACT_APP_SOCKET_URL || 'http://localhost:5000');
+const socket = io(process.env.REACT_APP_API_URL || 'http://localhost:5000');
 
 const VideoCapture = ({ candidateName, onSessionCreated, sessionId: propSessionId }) => {
   const webcamRef = useRef(null);
@@ -168,7 +168,7 @@ const VideoCapture = ({ candidateName, onSessionCreated, sessionId: propSessionI
   return (
     <div className="video-capture-container">
       <div className="video-section">
-        <h2>Interview Session - {candidateName}</h2>
+        <h2>🎥 Interview Session - {candidateName}</h2>
         <div className="video-wrapper">
           <div className="webcam-wrapper">
             <Webcam
@@ -206,18 +206,18 @@ const VideoCapture = ({ candidateName, onSessionCreated, sessionId: propSessionI
           </div>
           
           <div className="test-controls">
-            <h4>Test Detection Events:</h4>
+            <h4>🧪 Test Detection Events:</h4>
             <button onClick={() => simulateEvent('looking_away', 'Candidate looked away from screen', 'medium')}>
-              Simulate Looking Away
+              👀 Simulate Looking Away
             </button>
             <button onClick={() => simulateEvent('phone_detected', 'Mobile phone detected', 'high')}>
-              Simulate Phone Detection
+              📱 Simulate Phone Detection
             </button>
             <button onClick={() => simulateEvent('multiple_faces', 'Multiple faces detected', 'high')}>
-              Simulate Multiple Faces
+              👥 Simulate Multiple Faces
             </button>
             <button onClick={() => simulateEvent('no_face', 'No face detected for 10 seconds', 'high')}>
-              Simulate No Face
+              🚫 Simulate No Face
             </button>
           </div>
         </div>
@@ -225,17 +225,17 @@ const VideoCapture = ({ candidateName, onSessionCreated, sessionId: propSessionI
 
       <div className="monitoring-section">
         <div className="stats-panel">
-          <h3>Session Statistics</h3>
+          <h3>📊 Session Statistics</h3>
           <div className="stat-item">
-            <span className="stat-label">Focus Lost:</span>
+            <span className="stat-label">🎯 Focus Lost:</span>
             <span className="stat-value">{stats.focusLostCount}</span>
           </div>
           <div className="stat-item">
-            <span className="stat-label">Suspicious Events:</span>
+            <span className="stat-label">⚠️ Suspicious Events:</span>
             <span className="stat-value">{stats.suspiciousEvents}</span>
           </div>
           <div className="stat-item">
-            <span className="stat-label">Session ID:</span>
+            <span className="stat-label">🆔 Session ID:</span>
             <span className="stat-value" style={{ fontSize: '0.8em' }}>
               {sessionId || 'Not started'}
             </span>
@@ -243,17 +243,20 @@ const VideoCapture = ({ candidateName, onSessionCreated, sessionId: propSessionI
         </div>
 
         <div className="alerts-panel">
-          <h3>Real-time Alerts</h3>
+          <h3>🚨 Real-time Alerts</h3>
           <div className="alerts-list">
             {alerts.length === 0 ? (
-              <p style={{ textAlign: 'center', color: '#666' }}>
-                Monitoring active - No alerts yet
-              </p>
+              <div style={{ textAlign: 'center', color: '#718096', padding: '30px' }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>✅</div>
+                <p style={{ fontWeight: '500', fontSize: '1.1rem' }}>
+                  Monitoring active - No alerts yet
+                </p>
+              </div>
             ) : (
               alerts.map(alert => (
                 <div key={alert.id} className={`alert alert-${alert.severity}`}>
-                  <span className="alert-time">{alert.timestamp}</span>
-                  <span className="alert-message">{alert.message}</span>
+                  <span className="alert-time">⏰ {alert.timestamp}</span>
+                  <span className="alert-message">🚨 {alert.message}</span>
                 </div>
               ))
             )}

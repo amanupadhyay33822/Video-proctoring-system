@@ -23,15 +23,16 @@ function App() {
     if (showStartForm) {
       return (
         <div className="start-form">
-          <h2>Start Proctoring Session</h2>
+          <div style={{ fontSize: '4rem', marginBottom: '20px' }}>🎥</div>
+          <h2>🚀 Start Proctoring Session</h2>
           <input
             type="text"
-            placeholder="Enter candidate name"
+            placeholder="👤 Enter candidate name"
             value={candidateName}
             onChange={(e) => setCandidateName(e.target.value)}
           />
           <button onClick={() => handleStartSession(candidateName)} disabled={!candidateName}>
-            Start Session
+            🎯 Start Session
           </button>
         </div>
       );
@@ -58,12 +59,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Video Proctoring System</h1>
+        <h1>🎥 Video Proctoring System</h1>
         {!showStartForm && (
           <nav>
-            <button onClick={() => setCurrentView('capture')}>Video Capture</button>
-            <button onClick={() => setCurrentView('dashboard')}>Dashboard</button>
-            <button onClick={() => setCurrentView('report')}>Report</button>
+            <button onClick={() => setCurrentView('capture')}>📹 Video Capture</button>
+            <button onClick={() => setCurrentView('dashboard')}>📊 Dashboard</button>
+            <button onClick={() => setCurrentView('report')}>📋 Report</button>
           </nav>
         )}
       </header>
