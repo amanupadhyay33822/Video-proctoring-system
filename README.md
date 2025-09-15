@@ -4,8 +4,8 @@ An AI-powered real-time video proctoring system that monitors candidates during 
 
 <div align="center">
   
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://video-proctoring-frontend-6g08broai.vercel.app)
-[![Backend API](https://img.shields.io/badge/api-live-blue)](https://video-proctoring-backend-hu6b.onrender.com/health)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://video-proctoring-system-ebon.vercel.app/)
+[![Backend API](https://img.shields.io/badge/api-live-blue)](https://video-proctoring-system-fj6r.onrender.com/health)
 
 </div>
 
@@ -254,4 +254,5 @@ video-proctoring-system/
 3. Commit changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
 
