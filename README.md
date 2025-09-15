@@ -11,8 +11,8 @@ An AI-powered real-time video proctoring system that monitors candidates during 
 
 ## 🌐 Live Demo
 
-- **Frontend Application**: [https://video-proctoring-frontend-lrxjayfbt.vercel.app](https://video-proctoring-frontend-6g08broai.vercel.app)
-- **Backend API**: [https://video-proctoring-backend-hu6b.onrender.com](https://video-proctoring-backend-hu6b.onrender.com)
+- **Frontend Application**: [https://video-proctoring-frontend-lrxjayfbt.vercel.app](https://vercel.com/amans-projects-7ac50694/video-proctoring-system)
+- **Backend API**: [https://video-proctoring-backend-hu6b.onrender.com](https://video-proctoring-system-fj6r.onrender.com)
 - **API Health Check**: [https://video-proctoring-backend-hu6b.onrender.com/health](https://video-proctoring-backend-hu6b.onrender.com/health)
 
 ## 📋 Features
@@ -70,7 +70,7 @@ An AI-powered real-time video proctoring system that monitors candidates during 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/reddyharshavardhan/video-proctoring-system.git
+git clone https://github.com/amanupadhyay33822/Video-proctoring-system.git
 cd video-proctoring-system
 ```
 
@@ -82,7 +82,6 @@ npm install
 
 Create `.env` file:
 ```env
-PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 ```
 
@@ -255,3 +254,4 @@ video-proctoring-system/
 3. Commit changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
